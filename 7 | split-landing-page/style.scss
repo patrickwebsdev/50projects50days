@@ -1,0 +1,60 @@
+:root {
+  --play-color: rgba(87, 84, 236, 1);
+  --play-opacity-color: rgba(87, 84, 236, 0.7);
+  --xbox-color: rgba(28, 122, 28, 1);
+  --xbox-opacity-color: rgba(43, 43, 43, 0.8);
+}
+body {
+  background-color: #202020;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  &__split {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: flex 1.5s;
+    display: grid;
+    place-content: center;
+    &:nth-child(1) {
+      background-image: linear-gradient(var(--play-opacity-color), var(--play-opacity-color)), url('https://50projects50days.com/projects/split-landing-page/ps.jpg');
+    }
+    &:nth-child(2) {
+      background-image: linear-gradient(var(--xbox-opacity-color), var(--xbox-opacity-color)),url('https://50projects50days.com/projects/split-landing-page/xbox.jpg');
+    }
+    &:hover {
+      flex: 4;
+    }
+  }
+  &__title {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 3rem;
+  }
+  &__button {
+    padding: 1rem 3rem;
+    border: 0.25rem solid #FFF;
+    background: transparent;
+    font-weight: 600;
+    color: #FFF;
+    cursor: pointer;
+    &--primary {
+      &:hover {
+        background-color: var(--play-color);
+        border-color: var(--play-color)
+      }
+    }
+    &--secondary {
+      &:hover {
+        background-color: var(--xbox-color);
+        border-color: var(--xbox-color)
+      }
+    }
+  }
+}

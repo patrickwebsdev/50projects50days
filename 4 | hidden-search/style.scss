@@ -1,0 +1,47 @@
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #202020;
+  margin: 0;
+}
+.search {
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 3rem;
+  overflow: hidden;
+  &:hover {
+    & .search__container {
+      width: 10rem;
+    }
+  }
+  &__container {
+    width: 0rem;
+    overflow: hidden;
+    display: flex;
+    transition: width 500ms;
+    &.#{&}--active {
+      width: 10rem;
+    }
+  }
+  &__input {
+    border: none;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    height: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__button {
+    border: none;
+    background-color: #FFF;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+  }
+  &__icon {
+    font-size: 1.5rem;
+  }
+}

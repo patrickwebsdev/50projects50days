@@ -1,0 +1,94 @@
+@use 'sass:math';
+body {
+  background-color: #4682B4;
+  display: grid;
+  place-content: center;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+.form {
+  background-color: #2A4E6C;
+  padding: 4rem 3rem;
+  border-radius: 0.25rem;
+  &__title {
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  &__input {
+    z-index: 2;
+    width: 100%;
+    color: #FFF;
+    border: none;
+    border-bottom: 0.15rem solid #FFF;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    font-size: 1.2rem;
+    &:focus {
+      outline: none;
+      border-color: lightblue;
+      & ~ .form__label {
+        color: lightblue;
+        & > p {
+          transform: translateY(-1.25rem);
+        }
+      }
+    }
+    &:valid {
+      border-color: lightblue;
+      & ~ .form__label {
+        color: lightblue;
+        & > p {
+          transform: translateY(-1.25rem);
+        }
+      }
+    }
+  }
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #FFF;
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+    display: flex;
+    flex-direction: row;
+    cursor: text;
+    & > .form__up {
+      transform: translateY(0rem);
+      transition-duration: 300ms;
+      transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      @for $i from 2 through 8 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 50ms;
+        }
+      }
+    }
+  }
+  &__button {
+    background-color: lightblue;
+    color: #000;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  &__text {
+    margin-top: 1.5rem;
+    color: #FFF;
+  }
+  &__link {
+    color: lightblue;
+    text-decoration: none;
+  }
+}
