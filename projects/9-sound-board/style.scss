@@ -1,0 +1,35 @@
+body {
+  background-color: #A164DF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+.buttons {
+  text-align: center;
+  &__button {
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    color: #FFF;
+    border: none;
+    background-color: rebeccapurple;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    &__button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

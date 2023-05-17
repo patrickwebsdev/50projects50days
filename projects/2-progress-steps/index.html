@@ -5,28 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expanding Cards</title>
+  <link rel="stylesheet" href="../reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
-  <main class="card">
-    <section class="card__container card__container--active">
-      <h1 class="card__text">Explore the world</h1>
-    </section>
-    <section class="card__container">
-      <h1 class="card__text">Wild Forest</h1>
-    </section>
-    <section class="card__container">
-      <h1 class="card__text">Sunny Beach</h1>
-    </section>
-    <section class="card__container">
-      <h1 class="card__text">City on Winter</h1>
-    </section>
-    <section class="card__container">
-      <h1 class="card__text">Mountains - Clouds</h1>
-    </section>
+  <main>
+    <div class="progress">
+      <div class="progress__circle progress__circle--active">1</div>
+      <div class="progress__circle">2</div>
+      <div class="progress__circle">3</div>
+      <div class="progress__circle">4</div>
+      <div class="progress__circle">5</div>
+    </div>
+    <div class="buttons">
+      <button class="button button--primary" data-button="prev" disabled="true">Prev</button>
+      <button class="button button--primary" data-button="next">Next</button>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>

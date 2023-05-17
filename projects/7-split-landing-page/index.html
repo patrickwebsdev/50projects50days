@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hidden Search</title>
+  <title>Split Landing Page</title>
+  <link rel="stylesheet" href="../reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,11 +13,15 @@
   <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
-  <div class="search">
-    <div class="search__container">
-      <input type="text" class="search__input" placeholder="Search...">
+  <main class="container">
+    <div class="container__split">
+      <h1 class="container__title">Playstation 5</h1>
+      <button class="container__button container__button--primary">BUY NOW</button>
     </div>
-    <button class="search__button"><i class="search__icon fas fa-search"></i></button>
-  </div>
+    <div class="container__split">
+      <h1 class="container__title">XBox Series X</h1>
+      <button class="container__button container__button--secondary">BUY NOW</button>
+    </div>
+  </main>
 </body>
 </html>
