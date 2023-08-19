@@ -7,8 +7,8 @@ body {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-  text-rendering:optimizeLegibility;
+  font-family: "Montserrat", sans-serif;
+  text-rendering: optimizeLegibility;
 }
 main {
   width: 350px;
@@ -19,7 +19,7 @@ main {
   display: flex;
   justify-content: space-between;
   &::before {
-    content: '';
+    content: "";
     width: 100%;
     height: 0.2rem;
     background-color: #989898;
@@ -29,7 +29,7 @@ main {
     z-index: 0;
   }
   &::after {
-    content: '';
+    content: "";
     width: var(--line-percentage);
     height: 0.2rem;
     background-color: #00a2ff;
@@ -54,17 +54,17 @@ main {
     &--active {
       border-color: #00a2ff;
       color: #00a2ff;
-      background-color: #FFF;
+      background-color: #fff;
     }
   }
 }
 .buttons {
-    margin-top: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .button {
   padding: 0.5rem 2rem;
@@ -75,11 +75,11 @@ main {
   transition: transform 150ms;
   &:hover {
     transform: scale(1.05);
-    filter:brightness(0.85);
+    filter: brightness(0.85);
   }
   &--primary {
     background-color: #00a2ff;
-    color: #FFF;
+    color: #fff;
     &:disabled {
       background-color: #989898;
       cursor: not-allowed;
